@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody playerRigidBody;
+    private Rigidbody playerRigidbody;
     public float jumpForce = 10;
     public float gravityModifier = 1;
     public bool isOnGround = true;
+    public bool gameOver;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerRigidBody = GetComponent<Rigidbody>();
+        playerRigidbody = GetComponent<Rigidbody>();
         Physics.gravity *= gravityModifier;
     }
 
@@ -22,15 +23,24 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
             // ForceMode.Impulse immediately applies the force and needs less force
-            playerRigidBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            playerRigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
         }
     }
 
     // Whenever player enters a collision with something
     private void OnCollisionEnter(Collision collision)
-
     {
-        isOnGround = true;
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isOnGround = true;
+        }
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            gameOver = true;
+            Debug.Log("GAME OVER");
+        }
+
+
     }
 }
