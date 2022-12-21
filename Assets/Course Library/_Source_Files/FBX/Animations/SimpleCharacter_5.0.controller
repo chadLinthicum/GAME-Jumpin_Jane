@@ -7082,7 +7082,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Walk_Static
-  m_Speed: 0.5
+  m_Speed: 50
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 110188282}
@@ -7497,7 +7497,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Running_Jump
-  m_Speed: 0.675
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 110126729}
@@ -8341,7 +8341,7 @@ AnimatorStateMachine:
     m_Position: {x: 48, y: 156, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110275706}
-    m_Position: {x: 48, y: 240, z: 0}
+    m_Position: {x: 50, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110267120}
     m_Position: {x: 360, y: 240, z: 0}
