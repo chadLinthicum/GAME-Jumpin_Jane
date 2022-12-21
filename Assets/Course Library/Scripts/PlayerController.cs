@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRigidbody;
     private Animator playerAnim;
     private AudioSource playerAudio;
+    private float kickbackDistance = 20f;
     public ParticleSystem explosionParticle;
     public ParticleSystem dirtParticle;
     public AudioClip explosionAudio;
@@ -61,7 +62,7 @@ public class PlayerController : MonoBehaviour
             playerAudio.PlayOneShot(explosionAudio, 0.5f);
             playerAudio.PlayOneShot(gameOverAudio, 1);
             // Knock player back to prevent reoccurring collisions
-            transform.Translate(Vector3.back * 0.5f * Time.deltaTime * 50);
+            transform.Translate(Vector3.back * Time.deltaTime * kickbackDistance);
         }
 
 
