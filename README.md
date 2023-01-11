@@ -1,5 +1,5 @@
 # GAME-Jumpin_Jane
-Jane is lost in the woods and in a hurry to escape! Jump over the obstacles in her frantic path!
+Jane is lost on an island and in a hurry to escape! Jump over the obstacles in her frantic path!
 
 Play in your browser: https://metalvain.itch.io/jumpin-jane
 
